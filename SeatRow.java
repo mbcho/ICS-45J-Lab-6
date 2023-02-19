@@ -30,7 +30,6 @@ public class SeatRow {
 		else if (numSeats == 6) {
 			row = new boolean[] {false, false, false, false, false, false};
 		}
-		
 	}
 
 
@@ -42,6 +41,9 @@ public class SeatRow {
 	 * @returns true if the passenger can be added, false otherwise
 	 */
 	public boolean addPassengers(int numPassengers, int preference) {
+		if (numPassengers > numSeats) {
+			return false;
+		}
 		
 		return false; // FIX ME
 	}
